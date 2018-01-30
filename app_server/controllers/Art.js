@@ -1,8 +1,8 @@
 
 /* GET art page */
 module.exports.art = function(req, res){
-  res.render('Art', { title: 'Art' });
+  res.render('art', { title: 'Art' });
 };
 module.exports.elk = function(req, res){
-  res.render('Elk', { title: 'Elk' });
+  res.render('elk', { title: 'Elk' });
 };
