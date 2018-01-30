@@ -2,7 +2,7 @@
 
 }
 .double{
-  text-indent: 10%;
+  padding-right: 5px;
 }
 .center{
   text-align: center;
@@ -12,11 +12,45 @@ h1{
 
 }
 h2{
-  font-size: 25px;
-  text-indent: -10%;
+ padding-left: -50px;
 }
 .content{
-  padding-left: 25%;
-  padding-right: 45%;
-  padding-bottom: 4em;
+ padding-left: 5%;
+}
+.buffer{
+}
+.artboxes{
+  width: 100%;
+}
+a{
+ color: #F0E0D6;
+}
+a:hover{
+  color: #C0B0A6;
+}
+.list-group-item {
+background-color: #03707a;
+border:solid #00606c;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgb(13, 116, 124);
+border-right-color: rgb(13, 116, 124);
+border-right-style: solid;
+border-right-width: 1px;
+border-bottom-color: rgb(13, 116, 124);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-left-color: rgb(13, 116, 124);
+border-left-style: solid;
+border-left-width: 1px;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+border-radius: 16px;
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
+border-bottom-left-radius: 16px;
 }

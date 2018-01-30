@@ -307,8 +307,8 @@ body {
   line-height: 1.428571429;
   color: #F0EAD6;
   background-color: #5A647A;
-  padding-left: 70px;
   padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 input,
@@ -5609,14 +5609,14 @@ a.thumbnail:focus {
 }
 
 .list-group-item:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
 }
 
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 
 .list-group-item > .badge {
