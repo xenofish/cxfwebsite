@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var ctrlArt = require('../controllers/art.js');
-var ctrl = require('../controllers/Cs.js');
+var ctrlArt = require('../controllers/Art');
+var ctrl = require('../controllers/Cs');
 /* GET home page. */
 router.get('/', ctrl.index);
 
