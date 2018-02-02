@@ -3,7 +3,7 @@ var apiOptions = {
   server : "http://localhost:3000"
 };
 if (true) {
-  apiOptions.server = "https://colinxenofish.herokuapp.com/";
+  apiOptions.server = "https://colinxenofish.herokuapp.com";
 }
 /* GET art page */
 module.exports.art = function(req, res){
