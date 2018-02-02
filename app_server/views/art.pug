@@ -2,51 +2,38 @@ extends layout
 
 block content
  .col-xs-12.col-sm-8
-  h1 ART list
+  h1 Sculpture
   .row.list-group
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/elk2.jpg', title='elk')
-    h1
-     a(href='/art/elk' size='30') "Elk"
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#flower( src='/img/callalilly1.jpg', title='callalilly', alt='now you see me?')
-    h1
-     a(href='/art/callalilly' size='30') "Callalilly"
+   each piece in art
+    .col-xs-11.col-sm-6.col-lg-4.list-group-item
+     img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/'+piece.images[0].location+'.jpg', title=piece.title)
+     h1
+      a(href='/art/'+piece._id size='30') "#{piece.title}"
 
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/elk2.jpg', title='elk')
-    h1
-     a(href='/art/elk' size='30') "Elk"
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#flower( src='/img/callalilly1.jpg', title='callalilly', alt='now you see me?')
-    h1
-     a(href='/art/callalilly' size='30') "Callalilly"
-
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/elk2.jpg', title='elk')
-    h1
-     a(href='/art/elk' size='30') "Elk"
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#flower( src='/img/callalilly1.jpg', title='callalilly', alt='now you see me?')
-    h1
-     a(href='/art/callalilly' size='30') "Callalilly"
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/elk2.jpg', title='elk')
-    h1
-     a(href='/art/elk' size='30') "Elk"
-   .col-xs-11.col-sm-6.col-lg-4.list-group-item
-    img.col-xs-11.col-sm-6.col-lg-4.artboxes#flower( src='/img/callalilly1.jpg', title='callalilly', alt='now you see me?')
-    h1
-     a(href='/art/callalilly' size='30') "Callalilly"
 
 
 
  .col-xs-12.col-sm-4
-  h1 Art blurb
-  stuff There's an answer here,
-  |<br> If I look hard enough
-  |<br> There's a reason why I always reach for the harder stuff
-  |<br> It wasn't my daddy's way
-  |<br> He was down in the mines all day
-  |<br> I know he wanted more than mouths to feed and bills to pay
-  |<br> Maybe the Cumberland Gap just swallows you whole
+  h1 Artist's Statement
+  stuff
+  |<br>There is a curve there
+  |<br>Bending steel rod cold
+  |<br>Clean like it wants to change
+  |<br>Not like childhood doodles
+  |<br>Endless scribbles never inside the lines
+  |<br>
+  |<br>They don’t tell you that
+  |<br>
+  |<br>There is a strength in simplicity
+  |<br>There is a strength in steel
+  |<br>There is a simplicity to nature
+  |<br>There is a strength in bone
+  |<br>There is a simplicity in lines
+  |<br>There is a simplicity to symmetry
+  |<br>And a life in asymmetry
+  |<br>
+  |<br>That you can breathe
+  |<br>Like god into clay
+  |<br>Into metal
+  |<br>In continuous firing
+  |<br>Bending and rust

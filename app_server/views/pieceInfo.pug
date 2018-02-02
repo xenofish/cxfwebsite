@@ -1,0 +1,16 @@
+extends layout
+block content
+ .col-sm-2
+ .col-xs-12.col-sm-6
+  each image in info.images
+   .art
+    img#elk(src='/img/'+image.location+'.jpg', width='100%' title=image.alt)
+ .col-xs-12.col-sm-4
+  h1.title #{info.title}
+  .col-sm-2
+  .col-xs-12.col-sm-8
+   year Year: #{info.year} <br>
+   medium Medium: #{info.medium} <br>
+   location Location: #{info.location}<br>
+   status Status: #{info.status} <br>
+   description #{info.description} <br>
