@@ -48,7 +48,7 @@ var getPieceInfo = function (req, res, callback) {
 };
 
 var renderDetailPage = function (req, res, info) {
-res.render('PieceInfo', { title: info.title, info});
+res.render('pieceInfo', { title: info.title, info});
 };
 
 /* GET 'Location info' page */
