@@ -1,9 +1,10 @@
 extends layout
-
 block content
  .col-sm-2
  .col-xs-12.col-sm-6
-  img#elk(src='/img/elk1.jpg' width='100%')
+  each image in locs
+   .art
+    img#elk(src='/img/'+image+'.jpg', width='100%' )
  .col-xs-12.col-sm-4
   h1.title "Elk"
   .col-sm-2
@@ -13,4 +14,6 @@ block content
    location Location: Tacoma, WA <br>
    status Status: For Sale <br>
    description This is a description of the art <br>
-   images
+   each image in locs
+    a(class='button', onclick='first=\''+image+'\'' ) #{image}
+    script(src='/javascripts/helper.js')
