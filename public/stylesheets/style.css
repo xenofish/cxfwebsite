@@ -35,17 +35,17 @@ a:hover{
 background-color: #03707a;
 border:solid #00606c;
 border-top-style: solid;
-border-top-width: 1px;
-border-top-color: rgb(13, 116, 124);
-border-right-color: rgb(13, 116, 124);
+border-top-width: 4px;
+border-top-color: #00606c
+border-right-color: #00606c
 border-right-style: solid;
-border-right-width: 1px;
-border-bottom-color: rgb(13, 116, 124);
+border-right-width: 4px;
+border-bottom-color: #00606c
 border-bottom-style: solid;
-border-bottom-width: 1px;
-border-left-color: rgb(13, 116, 124);
+border-bottom-width: 4px;
+border-left-color: #00606c
 border-left-style: solid;
-border-left-width: 1px;
+border-left-width: 4px;
 border-image-source: initial;
 border-image-slice: initial;
 border-image-width: initial;
