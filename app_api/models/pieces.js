@@ -6,6 +6,7 @@ var pieceSchema = new mongoose.Schema({
   location: String,
   status: String,
   description: String,
+  imagetitle: String,
   images: [{
     location: String,
     alt: String
