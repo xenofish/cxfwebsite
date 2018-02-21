@@ -24,6 +24,15 @@ h2{
 }
 .artboxes{
   width: 100%;
+  position: absolute;
+    top: 3%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.artlist{
+  padding-top: 40%;
+  position: relative;
 }
 a{
  color: #F0E0D6;
