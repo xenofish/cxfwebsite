@@ -3,10 +3,10 @@ block content
  .col-sm-2
  .col-xs-12.col-sm-6
   each image in info.images
-   .art
+   .col-xs-11.list-group-item.artlist
     img#elk(src='/img/'+image.location+'.jpg', width='100%' title=image.alt)
   each video in info.videos
-   .art
+   .col-xs-11.list-group-item.artlist
     .col-sm-1
     .col-xs-12.col-sm-10
      video(width='100%' controls)
