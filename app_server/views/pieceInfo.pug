@@ -5,6 +5,9 @@ block content
   each image in info.images
    .art
     img#elk(src='/img/'+image.location+'.jpg', width='100%' title=image.alt)
+  each video in info.video
+   .art
+    video #elk(src='/vid/'+image.location+'.mp4', width='100%')
  .col-xs-12.col-sm-4
   h1.title #{info.title}
   .col-sm-2

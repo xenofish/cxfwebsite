@@ -9,6 +9,9 @@ var pieceSchema = new mongoose.Schema({
   images: [{
     location: String,
     alt: String
+  }],
+  videos: [{
+    location: String
   }]
 });
 mongoose.model('piece',pieceSchema);
