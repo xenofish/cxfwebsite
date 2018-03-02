@@ -1,5 +1,5 @@
 var mongoose = require ('mongoose');
-var dbURI = 'mongodb://master:every@ds161146.mlab.com:61146/heroku_ph8hf06c'
+var dbURI = 'mongodb://guest2:wonky@ds161146.mlab.com:61146/heroku_ph8hf06c'
 mongoose.connect(dbURI);
 mongoose.connection.on('connected', function () {
   console.log('Mongoose connected to '+dbURI);

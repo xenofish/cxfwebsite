@@ -4,12 +4,33 @@
 .double{
   padding-right: 5px;
 }
+a.center{
+    text-align: center;
+}
 .center{
   text-align: center;
+
+}
+.right{
+  text-align: right;
+  padding-left: 65%;
+  padding-top: 1%;
+  color: #5A647A;
+  position: fixed;
 }
 h1{
   text-align: center;
 
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #F0E0D6;
+   color: #5A647A;
+   border-color: #911821;
+   text-align: center;
 }
 h2{
  padding-left: -50px;
