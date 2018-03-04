@@ -6,7 +6,7 @@ block content
   .row.list-group
    each piece in art
     .col-xs-11.col-sm-6.col-lg-4.list-group-item.artlist
-     a(href='/art/'+piece._id) 
+     a(href='/art/'+piece._id)
       img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/'+piece.imagetitle+'.jpg', title=piece.title)
      h1
       a(href='/art/'+piece._id size='30') "#{piece.title}"
@@ -38,3 +38,11 @@ block content
   |<br>Into metal
   |<br>In continuous firing
   |<br>Bending and rust
+  |<br>
+  |<br>
+  h1 Helpful Info
+  info If you'd like to purchase any of my art, or commission any art,
+  |<br> contact me at:
+  | #[a( href='mailto:colinxenofish@gmail.com' ) ColinXenoFish@gmail.com],
+  |<br> or go to my
+  | #[a( href='https://www.etsy.com/shop/ColinXenoFishArt' ) Etsy shop].
