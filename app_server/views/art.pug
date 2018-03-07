@@ -1,18 +1,18 @@
 extends layout
-
+block dome
+ title=title
 block content
- .col-xs-12.col-sm-8
+ .col-xs-12.col-sm-8(ng-controller='artController')
   h1 Sculpture
+  label(for=filter) Filter Pieces: &ensp;
+  input#filter(type="text", name="filter", ng-model="textFilter")
+  h1 {{message}}
   .row.list-group
-   each piece in art
-    .col-xs-11.col-sm-6.col-lg-4.list-group-item.artlist
-     a(href='/art/'+piece._id)
-      img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/'+piece.imagetitle+'.jpg', title=piece.title)
+    .col-xs-11.col-sm-6.col-lg-4.list-group-item.artlist(ng-repeat="piece in art.pieces | filter : textFilter")
+     a(href='/art/{{piece._id}}')
+      img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/{{piece.imagetitle}}.jpg', title='{{piece.title}}')
      h1
-      a(href='/art/'+piece._id size='30') "#{piece.title}"
-
-
-
+      a(href='/art/{{piece._id}}' size='30') "{{piece.title}}"
 
  .col-xs-12.col-sm-4
   h1 Artist's Statement

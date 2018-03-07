@@ -1,22 +1,23 @@
 extends layout
+
+block dome
+ title(ng-controller="pieceController" model=id) {{title}}
 block content
  .col-sm-2
- .col-xs-12.col-sm-6
-  each image in info.images
-   .art
-    img#elk(src='/img/'+image.location+'.jpg', width='100%' title=image.alt)
-  each video in info.videos
-   .art
-    .col-sm-1
-    .col-xs-12.col-sm-10
-     video(width='100%' controls)
-      source(src='/vid/'+video.location+'.mp4', type='video/mp4', id='theVideo')
- .col-xs-12.col-sm-4
-  h1.title #{info.title}
-  .col-sm-2
-  .col-xs-12.col-sm-8
-   year Year: #{info.year} <br>
-   medium Medium: #{info.medium} <br>
-   location Location: #{info.location}<br>
-   status Status: #{info.status} <br>
-   description #{info.description} <br>
+ .controller(ng-controller="pieceController" model=id)
+  .col-xs-12.col-sm-6
+    .art(ng-repeat="image in art.info2.images")
+     img#elk(src='/img/{{image.location}}.jpg', width='100%' title="{{image.alt}}")
+    .art(ng-repeat="video in art.info2.videos")
+      .col-sm-12.col-md-10.col-md-offset-1
+       video(width='100%' controls)
+        source(src='/vid/{{video.location}}.mp4', type='video/mp4', id='theVideo')
+  .col-xs-12.col-sm-4
+   h1.title {{art2.info.title}}
+   .col-sm-2
+   .col-xs-12.col-sm-8
+    year Year: {{art.info2.year}} <br>
+    medium Medium: {{art.info2.medium}} <br>
+    location Location: {{art.info2.location}}<br>
+    status Status: {{art.info2.status}} <br>
+    description {{art.info2.description}} <br>

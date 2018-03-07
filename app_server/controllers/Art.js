@@ -6,7 +6,7 @@ if (true) {
   apiOptions.server = "https://colinxenofish.herokuapp.com";
 }
 /* GET art page */
-module.exports.art = function(req, res){
+/*module.exports.art = function(req, res){
   var requestOptions, path;
   path = "/api/pieces";
    requestOptions= {
@@ -23,9 +23,11 @@ module.exports.art = function(req, res){
 };
 var renderArtList = function (req,res,responseBody){
 res.render('art', { title: 'Art', art: responseBody});
-};
-
-
+};*/
+module.exports.art = function(req, res){
+res.render('art', { title: 'Art'});
+}
+/*
 var getPieceInfo = function (req, res, callback) {
   var requestOptions, path;
   path = "/api/pieces/" + req.params.pieceid;
@@ -48,12 +50,15 @@ var getPieceInfo = function (req, res, callback) {
 };
 
 var renderDetailPage = function (req, res, info) {
-res.render('pieceInfo', { title: info.title, info});
+res.render('pieceInfo', { title:"Piece Info", id:req.params.pieceid});
 };
 
-/* GET 'Location info' page */
 module.exports.pieceInfo = function(req, res){
   getPieceInfo(req, res, function(req, res, responseData) {
     renderDetailPage(req, res, responseData);
   });
 };
+*/
+module.exports.pieceInfo = function(req, res){
+res.render('pieceInfo', { title:"Piece Info", id:req.params.pieceid});
+  };
