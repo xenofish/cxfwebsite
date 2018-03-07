@@ -14,14 +14,18 @@ var artController = function($scope,artData)
 var artData = function ($http) {
   return $http.get('/api/pieces');
 }
-var pieceController = function($scope, $attrs, $http, artData)
+var pieceController = function($scope, $attrs, $http)
 {
+  $scope.changePrimary=function(change){
+    $scope.primary=change;
+  }
   $scope.title= "Loading!"
   $scope.message = "Fetching images.";
   $http.get('/api/pieces/'+$attrs.model)
    .then(function(data) {
+     $scope.primary = data.data.images[0].location;
      $scope.message = "/api/pieces/"+$attrs.model;
-     $scope.art = {info2: data.data};
+     $scope.art = {info: data.data};
      $scope.title=data.data.title
   },function(e){
      $scope.message = "Something's gone wrong! Sorry!"

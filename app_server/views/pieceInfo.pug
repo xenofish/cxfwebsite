@@ -3,21 +3,24 @@ extends layout
 block dome
  title(ng-controller="pieceController" model=id) {{title}}
 block content
- .col-sm-2
- .controller(ng-controller="pieceController" model=id)
-  .col-xs-12.col-sm-6
-    .art(ng-repeat="image in art.info2.images")
-     img#elk(src='/img/{{image.location}}.jpg', width='100%' title="{{image.alt}}")
-    .art(ng-repeat="video in art.info2.videos")
-      .col-sm-12.col-md-10.col-md-offset-1
-       video(width='100%' controls)
-        source(src='/vid/{{video.location}}.mp4', type='video/mp4', id='theVideo')
-  .col-xs-12.col-sm-4
-   h1.title {{art2.info.title}}
+ .controller(ng-controller="pieceController" model=id  ng-init="count=7")
    .col-sm-2
-   .col-xs-12.col-sm-8
-    year Year: {{art.info2.year}} <br>
-    medium Medium: {{art.info2.medium}} <br>
-    location Location: {{art.info2.location}}<br>
-    status Status: {{art.info2.status}} <br>
-    description {{art.info2.description}} <br>
+   .col-xs-12.col-sm-6
+     .art
+       img(src='/img/{{primary}}.jpg', width='100%')
+     .art(ng-repeat="video in art.info.videos")
+       .col-sm-12.col-md-10.col-md-offset-1
+        video(width='100%' controls)
+         source(src='/vid/{{video.location}}.mp4', type='video/mp4', id='theVideo')
+   .col-xs-12.col-sm-4
+    h1.title {{art.info.title}}
+    .col-sm-2
+    .col-xs-12.col-sm-8
+     year Year: {{art.info.year}} <br>
+     medium Medium: {{art.info.medium}} <br>
+     location Location: {{art.info.location}}<br>
+     status Status: {{art.info.status}} <br>
+     description {{art.info.description}} <br>
+     h1 Images:
+     .col-xs-5.others(ng-repeat="image in art.info.images")
+      img(src='/img/{{image.location}}.jpg', width='100%', ng-click="changePrimary(image.location)" )
