@@ -16,14 +16,18 @@ var artData = function ($http) {
 }
 var pieceController = function($scope, $attrs, $http)
 {
-  $scope.changePrimary=function(change){
-    $scope.primary=change;
+  $scope.changePrimary=function(change,to){
+    $scope.primary = 0;
+    $scope.primary = change;
+    $scope.type = to;
   }
   $scope.title= "Loading!"
   $scope.message = "Fetching images.";
   $http.get('/api/pieces/'+$attrs.model)
    .then(function(data) {
      $scope.primary = data.data.images[0].location;
+     $scope.videosStatus = data.data.videos.length>0 ? "Videos:" : "";
+     $scope.type = "image";
      $scope.message = "/api/pieces/"+$attrs.model;
      $scope.art = {info: data.data};
      $scope.title=data.data.title
@@ -32,8 +36,19 @@ var pieceController = function($scope, $attrs, $http)
      console.log(e);
    });
 };
+
 angular
   .module('myAng')
   .controller('pieceController',pieceController)
   .controller('artController',artController)
   .service('artData', artData)
+  .directive("ngMobileClick", [function () {
+      return function (scope, elem, attrs) {
+          elem.bind("touchstart click", function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+
+              scope.$apply(attrs["ngMobileClick"]);
+          });
+      }
+  }]);
