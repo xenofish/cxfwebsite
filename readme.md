@@ -1,35 +1,12 @@
-# Getting MEAN application code
+# Colin Xeno Fish's Website
 
-This is the code for the sample 'Loc8r' application that is built through the course of my book [Getting MEAN](https://www.manning.com/books/getting-mean-with-mongo-express-angular-and-node).
+This is the code behind my website, https://ColinXenoFish.herokupapp.com
+It is built with on the MEAN development stack, unabbreviated to:
+M- MongoDB, a simple database language alternative to MySQL
+E- Express, a framework for delivering webpages built upon Node.js
+A- Angular.js, a framework for building dynamic webpages
+N- Node.js, a simple Javascript runtime with an extensive open source library
+It also utilizes the Pug markup language for HTML, and Bootstrap for the CSS, specifically the Amelia theme.
 
-Getting MEAN is published by Manning, and teaches readers how to develop web applications end-to-end using the MEAN stack.
-
-## The application at various stages
-
-There are named branches for the various states of the code throughout the book:
-
-* `master` **Chapter 3 start**: A blank Express 4.9.0 project
-* `chapter-03` **Chapter 3 end**: Creating and setting up a MEAN project
-* `chapter-04-view` **Chapter 4 mid-point**: The data is hard coded into views
-* `chapter-04` **Chapter 4 end**: Building a static site with Node.js and Express
-* `chapter-05` **Chapter 5**: Building a data model with MongoDB and Mongoose
-* `chapter-06` **Chapter 6**: Writing a REST API: Exposing your MongoDB database to the application
-* `chapter-07` **Chapter 7**: Consuming a REST API: Using an API from inside Express
-* `chapter-08` **Chapter 8**: Adding Angular components to an Express application
-* `chapter-09` **Chapter 9**: Building a Single Page Application with Angular: Foundations
-* `chapter-10` **Chapter 10**: Building a Single Page Application with Angular: The next level
-* `chapter-11` **Chapter 11**: Authenticating users, managing sessions and securing APIs
-
-## Get the code
-
-To get the code for a specific branch:
-
-`$ git clone -b branch-name https://github.com/simonholmes/getting-MEAN.git`
-
-Then change into the folder the git clone command will create:
-
-`$ cd getting-MEAN`
-
-And finally install the dependencies:
-
-`npm install`
+The website was built in no small part with help from Simon Holme's Textbook,
+Getting Mean: https://github.com/simonholmes/getting-MEAN.
