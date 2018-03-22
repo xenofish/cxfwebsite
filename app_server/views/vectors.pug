@@ -1,0 +1,14 @@
+extends layout
+
+block dome
+  title= title
+  script(src='/javascripts/p5.js')
+  script(src='/javascripts/geosketch.js')
+block content
+
+  .col-xs-12.col-sm-6.col-sm-offset-3
+   script(src='/javascripts/geosketch.js')
+  .col-xs-12.col-sm-4
+   input(type="number" onChange="changeROne(this.value)" value='1')
+   input(type="number" onChange="changeRTwo(this.value)" value='-2')
+   input(type="number" onChange="changeRThree(this.value)" value='1')
