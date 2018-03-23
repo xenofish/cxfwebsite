@@ -11,16 +11,31 @@ block content
   .col-xs-12.col-sm-4
    input(type="text" onChange="parseRotators(this.value)" value='5 -7 89')
    <br>
-   draw Draw Image: &nbsp;
+   draw Draw Image:
+   br
    drawButtons
     label(for='on')  On &nbsp;
     input(type="radio" name='draw' id='on' checked onclick='setDraw(true)')
     label(for='off')  &nbsp; Off &nbsp;
     input(type="radio" name='draw' id="off" onclick='setDraw(false)')
    <br>
-   draw Show Vectors: &nbsp;
+   draw Show Vectors:
+   br
    vectorsButtons
     label(for='on')  On &nbsp;
      input(type="radio" name='vector' id='on' checked onclick='setVect(true)')
      label(for='off')  &nbsp; Off &nbsp;
      input(type="radio" name='vector' id="off" onclick='setVect(false)')
+
+   br
+   back Background Color: &nbsp;
+   br
+   input(type="text" onChange="changeBackgroundColor(this.value)" value='5A647A')
+   br
+   lines Line Color: &nbsp;
+   br
+   input(type="text" onChange="changeStrokeColor(this.value)" value='F0EAD6')
+   br
+   br
+   save
+    button(onclick="saved('whooooo')") save sketch
