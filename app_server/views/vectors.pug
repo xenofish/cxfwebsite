@@ -9,6 +9,18 @@ block content
   .col-xs-12.col-sm-6.col-sm-offset-3
    script(src='/javascripts/geosketch.js')
   .col-xs-12.col-sm-4
-   input(type="number" onChange="changeROne(this.value)" value='1')
-   input(type="number" onChange="changeRTwo(this.value)" value='-2')
-   input(type="number" onChange="changeRThree(this.value)" value='1')
+   input(type="text" onChange="parseRotators(this.value)" value='5 -7 89')
+   <br>
+   draw Draw Image: &nbsp;
+   drawButtons
+    label(for='on')  On &nbsp;
+    input(type="radio" name='draw' id='on' checked onclick='setDraw(true)')
+    label(for='off')  &nbsp; Off &nbsp;
+    input(type="radio" name='draw' id="off" onclick='setDraw(false)')
+   <br>
+   draw Show Vectors: &nbsp;
+   vectorsButtons
+    label(for='on')  On &nbsp;
+     input(type="radio" name='vector' id='on' checked onclick='setVect(true)')
+     label(for='off')  &nbsp; Off &nbsp;
+     input(type="radio" name='vector' id="off" onclick='setVect(false)')
