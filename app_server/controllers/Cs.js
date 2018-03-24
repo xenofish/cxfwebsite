@@ -4,4 +4,4 @@ module.exports.index = function(req, res){
 };
 module.exports.vectors = function(req, res){
 res.render('vectors', { title:"Vectors" });
-    };
+};

@@ -30,17 +30,23 @@ var pieceController = function($scope, $attrs, $http)
      $scope.type = "image";
      $scope.message = "/api/pieces/"+$attrs.model;
      $scope.art = {info: data.data};
-     $scope.title=data.data.title
+     $scope.title=data.data.title;
   },function(e){
      $scope.message = "Something's gone wrong! Sorry!"
      console.log(e);
    });
 };
 
+var vectorController = function($scope)
+{
+  $scope.opt=true;
+  console.log("ran");
+}
 angular
   .module('myAng')
   .controller('pieceController',pieceController)
   .controller('artController',artController)
+  .controller('vectorController',vectorController)
   .service('artData', artData)
   .directive("ngMobileClick", [function () {
       return function (scope, elem, attrs) {

@@ -5,10 +5,14 @@ var showVect = true;
 var drawn = true;
 var backgroundColor = '#5A647A';
 var strokeColor = '#F0EAD6';
+var labelOn = true;
+var label = "5 -7 1";
+var valid = true;
 function Rotation(theta)
   {
   this.sn = Math.sin(theta*con);
   this.cs = Math.cos(theta*con);
+  this.theta = theta
   }
 function Vector(x,y)
   {
@@ -23,6 +27,7 @@ function rotateB (v, r) {
 }
 
 function setup() {
+
   createCanvas(610, 610);
 }
 
@@ -98,6 +103,11 @@ if (dummy>361){
   showDraw= false;
   dummy=0;
 }
+if (labelOn == true){
+textSize(32);
+fill(strokeColor);
+text(label,-width/2,-height/2 +30);
+}
 }
 
 
@@ -119,6 +129,31 @@ var oldTot = new Vector(xcount*(1.0/vectors.length),ycount*(1.0/vectors.length))
 var newTot = new Vector(xcount*(1.0/vectors.length),ycount*(1.0/vectors.length))
 function parseRotators(text) {
   var parsed = text.split(' ');
+  label= text;
+  validTemp=true;
+  for (i=0;i<parsed.length; i++)
+  {
+    if (isNumeric(parsed[i])==false)
+    {
+      validTemp = false;
+    }
+  }
+  valid= validTemp;
+  if (valid == false)
+  {
+    label = "Error: Not A Vaild Input"
+    var tempRotators = [];
+    var tempVectors = [];
+    for (i=0;i<parsed.length; i++)
+    {
+      tempRotators[i] = new Rotation(0);
+      tempVectors[i] = new Vector(0,1);
+    }
+    if (drawn==true){
+      showDraw = true;
+    }
+  }
+  if (valid== true){
   var tempRotators = [];
   var tempVectors = [];
   for (i=0;i<parsed.length; i++)
@@ -129,6 +164,7 @@ function parseRotators(text) {
   if (drawn==true){
     showDraw = true;
   }
+}
   rotators = tempRotators;
   vectors = tempVectors;
   loop();
@@ -158,7 +194,7 @@ function setVect(bool){
   dummy=0;
 }
 function saved(text){
-  save('sketch.jpg');
+  save(label+'.jpg');
 }
 function changeBackgroundColor(color){
 backgroundColor = '#'+color;
@@ -177,5 +213,16 @@ if (drawn==true){
 loop();
 resetVectors();
 dummy=0;
-
+}
+function setLabel(bool){
+labelOn = bool;
+if (drawn==true){
+  showDraw = true;
+}
+loop();
+resetVectors();
+dummy=0;
+}
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
 }

@@ -2,6 +2,7 @@ extends layout
 
 block dome
   title= title
+  title(ng-controller="vectorController" model=id)
   script(src='/javascripts/p5.js')
   script(src='/javascripts/geosketch.js')
 block content
@@ -13,31 +14,48 @@ block content
    br
    input(type="text" onChange="parseRotators(this.value)" value='5 -7 1')
    <br>
-   draw Draw Image:
+   draw Show Options:
    br
    drawButtons
     label(for='on')  On &nbsp;
-    input(type="radio" name='draw' id='on' checked onclick='setDraw(true)')
+    input(type="radio" name='opt' id='on' ng-click='opt=true')
     label(for='off')  &nbsp; Off &nbsp;
-    input(type="radio" name='draw' id="off" onclick='setDraw(false)')
+    input(type="radio" name='opt' id="off" checked ng-click='opt=false')
    <br>
-   draw Show Vectors:
-   br
-   vectorsButtons
-    label(for='on')  On &nbsp;
-     input(type="radio" name='vector' id='on' checked onclick='setVect(true)')
+   options(ng-show="opt")
+    draw Draw Image:
+    br
+    drawButtons
+     label(for='on')  On &nbsp;
+     input(type="radio" name='draw' id='on' checked onclick='setDraw(true)')
      label(for='off')  &nbsp; Off &nbsp;
-     input(type="radio" name='vector' id="off" onclick='setVect(false)')
+     input(type="radio" name='draw' id="off" onclick='setDraw(false)')
+    <br>
+    draw Show Vectors:
+    br
+    vectorsButtons
+     label(for='on')  On &nbsp;
+      input(type="radio" name='vector' id='on' checked onclick='setVect(true)')
+      label(for='off')  &nbsp; Off &nbsp;
+      input(type="radio" name='vector' id="off" onclick='setVect(false)')
+    br
+    draw Show Label:
+    br
+    vectorsButtons
+     label(for='on')  On &nbsp;
+      input(type="radio" name='label' id='on' checked onclick='setLabel(true)')
+      label(for='off')  &nbsp; Off &nbsp;
+      input(type="radio" name='label' id="off" onclick='setLabel(false)')
 
-   br
-   back Background Color: &nbsp;
-   br
-   input(type="text" onChange="changeBackgroundColor(this.value)" value='5A647A')
-   br
-   lines Line Color: &nbsp;
-   br
-   input(type="text" onChange="changeStrokeColor(this.value)" value='F0EAD6')
-   br
-   br
+    br
+    back Background Color (HEX): &nbsp;
+    br
+    input(type="text" onChange="changeBackgroundColor(this.value)" value='5A647A')
+    br
+    lines Line Color (HEX): &nbsp;
+    br
+    input(type="text" onChange="changeStrokeColor(this.value)" value='F0EAD6')
+    br
+    br
    save
     button(onclick="saved('whooooo')") save sketch
