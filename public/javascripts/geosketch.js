@@ -194,7 +194,7 @@ function setVect(bool){
   dummy=0;
 }
 function saved(text){
-  save(label+'.jpg');
+  save(label.replace(/ /g,'_')+'.jpg');
 }
 function changeBackgroundColor(color){
 backgroundColor = '#'+color;
