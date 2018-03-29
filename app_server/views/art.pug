@@ -9,7 +9,7 @@ block content
   h1 {{message}}
   .row.list-group
     .col-xs-11.col-sm-6.col-lg-4.list-group-item.artlist(ng-repeat="piece in art.pieces | filter : textFilter")
-     a(href='/art/{{piece._id}}')
+     a(href='/Art/{{piece._id}}')
       img.col-xs-11.col-sm-6.col-lg-4.artboxes#elk(src='/img/{{piece.imagetitle}}.jpg', title='{{piece.title}}')
      h1
       a(href='/art/{{piece._id}}' size='30') "{{piece.title}}"

@@ -6,5 +6,5 @@ module.exports.vectors = function(req, res){
 res.render('vectors', { title:"Vectors" });
 };
 module.exports.aboutVectors = function(req, res){
-res.render('aboutVectors', { title:"About Vectors" });
+res.render('aboutv', { title:"About Vectors" });
 };
