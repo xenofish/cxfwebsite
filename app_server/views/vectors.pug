@@ -6,19 +6,17 @@ block dome
   script(src='/javascripts/p5.js')
   script(src='/javascripts/geosketch.js')
 block content
-
-  .col-xs-12.col-sm-6.col-sm-offset-3
-   script(src='/javascripts/geosketch.js')
-  .col-xs-12.col-sm-4
+ .col-sm-4
+  .col-xs-6.col-sm-12
    h1
     .left Vectors:
-   input(type="text" onChange="parseRotators(this.value)" value='5 -7 1')
+   input(type="text" onChange="parseRotators(this.value)" ng-model='ints' ng-init="ints='5 -7 1'")
    <br>
    draw Show Options:
    br
    drawButtons
     label(for='on')  On &nbsp;
-    input(type="radio" name='opt' id='on' ng-click='opt=true')
+    input(type="radio" name='opt' id='on' ng-click=' opt=true')
     label(for='off')  &nbsp; Off &nbsp;
     input(type="radio" name='opt' id="off" checked ng-click='opt=false')
    <br>
@@ -62,3 +60,27 @@ block content
    br
    h3.left
     a(href="Vectors/About") About Vectors
+  .col-xs-6.col-sm-12
+   h3.left
+    My Favorites:
+   button(ng-click='ints="44 77 11"' onclick="parseRotators('44 77 11')") 44 77 11
+   button(ng-click='ints="190 170 17"' onclick="parseRotators('190 170 17')") 190 170 17
+   button(ng-click='ints="13 17 -45"' onclick="parseRotators('13 17 -45')") 13 17 -45
+   br
+   button(ng-click='ints="1 -2 121"' onclick="parseRotators('1 -2 121')") 1 -2 121
+   button(ng-click='ints="-54 90"' onclick="parseRotators('-54 90')") -54 90
+   button(ng-click='ints="179 179 179 3"' onclick="parseRotators('179 179 179 3')") 179 179 179 3
+   br
+   button(ng-click='ints="34 129"' onclick="parseRotators('34 129')") 34 129
+   button(ng-click='ints="179 182 179"' onclick="parseRotators('179 182 179')") 179 182 179
+   button(ng-click='ints="1 183 178"' onclick="parseRotators('1 183 178')") 1 183 178
+   br
+   button(ng-click='ints="1 144 143"' onclick="parseRotators('1 144 143')") 1 144 143
+   button(ng-click='ints="19 -5 31"' onclick="parseRotators('19 -5 31')") 19 -5 31
+   button(ng-click='ints="71 73 -144"' onclick="parseRotators('71 73 -144')") 71 73 -144
+   br
+   button(ng-click='ints="5 -7 89"' onclick="parseRotators('5 -7 89')") 5 -7 89
+   button(ng-click='ints="-189 99 -81"' onclick="parseRotators('-189 99 -81')") -189 99 -81
+   button(ng-click='ints="2 12 -13"' onclick="parseRotators('2 12 -13')") 2 12 -13
+
+ script(src='/javascripts/geosketch.js')

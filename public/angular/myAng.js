@@ -40,7 +40,7 @@ var pieceController = function($scope, $attrs, $http)
 var vectorController = function($scope)
 {
   $scope.opt=true;
-  console.log("ran");
+  $scope.ints="44 11 77"
 }
 angular
   .module('myAng')
