@@ -7,5 +7,5 @@ router.get('/', ctrl.index);
 router.get('/Art', ctrlArt.art);
 router.get('/Art/:pieceid', ctrlArt.pieceInfo);
 router.get('/Vectors', ctrl.vectors);
-router.get('/Vectors/About', ctrl.aboutVectors);
+router.get('/AboutVectors', ctrl.aboutVectors);
 module.exports = router;
