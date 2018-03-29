@@ -6,5 +6,6 @@ var ctrl = require('../controllers/Cs');
 router.get('/', ctrl.index);
 router.get('/Art', ctrlArt.art);
 router.get('/Art/:pieceid', ctrlArt.pieceInfo);
-router.get('/Vectors', ctrl.vectors)
+router.get('/Vectors', ctrl.vectors);
+router.get('/Vectors/About', ctrl.aboutVectors);
 module.exports = router;

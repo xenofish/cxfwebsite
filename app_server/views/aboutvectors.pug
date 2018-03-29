@@ -1,0 +1,129 @@
+extends layout
+
+block dome
+  title= title
+block content
+ h1 Welcome to my Vector Art!
+
+ .com-xs-12
+  .col-xs-12.col-sm-4
+   h1 1. Vectors
+   .col-xs-12.col-sm
+    info My vector art works by adding up rotating vectors, rotating each a number of degrees equal to the number you set at the top,
+    | &nbsp; drawing a line between the old and the new points. This process continues until the vectors return to their starting position.
+    br
+    br
+    info You can have any number of inputs, not just three,
+    | &nbsp; but I find the drawings with three inputs to be more varied than two and more approachable than four.
+  .col-xs-12.col-sm-4
+   img(src="/img/vect1.jpg" width="100%")
+  .col-xs-12.col-sm-4
+   img(src="/img/vect2.jpg" width="100%")
+
+ .com-xs-12
+  .col-xs-12.col-sm-4
+   h1 2. Options
+   .col-xs-12.col-sm
+    info If the Draw Image feature is on on, the picture will show the drawing line by line.
+    | &nbsp; If it is off, it will load the whole image immediately.
+    br
+    br
+    info The degrees are displayed in the upper left of the image.
+    | &nbsp; This can turned off by changing the show label option.
+    br
+    br
+    info If the Show Vectors option is on, when drawing, the positions of the vectors will be shown.
+    br
+    br
+    info You can save the image with the Save Image button.
+    | &nbsp; You can also change the colors with hex values, so you can save it in whatever colors you want!
+  .col-xs-12.col-sm-4
+     img(src="/img/vect13.jpg" width="100%")
+  .col-xs-12.col-sm-4
+     img(src="/img/vect14.jpg" width="100%")
+
+ .com-xs-12
+  .col-xs-12.col-sm-4
+   h1 3. Math Facts!
+   .col-xs-12.col-sm
+    info Because each input represents a number of degrees,
+    | &nbsp; each input is the same as itself 	&plusmn; 360.
+    br
+    info For example: 361 = 1, -90 = 270, 1000 = 280 = -80.
+    br
+    br
+    info Each image therefore is made up of a maximum of 360 lines, as after 360 rotations,
+    | &nbsp; each vector will be back at the 0 position, or upright.
+    br
+    br
+    info Each image is bilaterally symmetrical, although many can be more symmetrical.
+    br
+    br
+    info It is easy to make shapes with the common divisors of 360:
+    br
+    info 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180 and 360.
+    br
+    br
+    info For short: 72-pentagon, 90-square, 120-triangle, 144-star.
+    br
+    br
+    info Because vector addition is commutative the order of the inputs doesn't matter,
+    | &nbsp; so 1 5 -7 = 5 -7 1 = -7 1 5.
+  .col-xs-12.col-sm-4
+     img(src="/img/vect3.jpg" width="100%")
+  .col-xs-12.col-sm-4
+     img(src="/img/vect4.jpg" width="100%")
+
+  .com-xs-12
+   .col-xs-12.col-sm-4
+    h1 4. Netting
+    .col-xs-12.col-sm
+     info Any simple pattern multiplied by a non-divisor of 360 (most prime numbers, like 11)
+     | &nbsp; will make the same pattern, but with an added 'net' around it.
+   .col-xs-12.col-sm-4
+      img(src="/img/vect5.jpg" width="100%")
+   .col-xs-12.col-sm-4
+      img(src="/img/vect6.jpg" width="100%")
+
+   .com-xs-12
+    .col-xs-12.col-sm-4
+     h1 5. Simplification
+     .col-xs-12.col-sm
+      info Any simple pattern multiplied by a divisor of 360 (listed above, like 10)
+      | &nbsp; will make the same pattern, but simplified or blockier.
+      br
+      br
+      info If you multiply a simple pattern by both, you get a simplified net!
+    .col-xs-12.col-sm-4
+       img(src="/img/vect7.jpg" width="100%")
+    .col-xs-12.col-sm-4
+       img(src="/img/vect8.jpg" width="100%")
+
+    .com-xs-12
+      .col-xs-12.col-sm-4
+       h1 6. Adds-to-Zero
+       .col-xs-12.col-sm
+        info If all the inputs add to zero (or a multiple of 360),
+        | &nbsp; it will make a shape with a number of sides equal to the number of inputs.
+        br
+        br
+        info If you only have 2 inputs, it makes a line!
+      .col-xs-12.col-sm-4
+         img(src="/img/vect9.jpg" width="100%")
+      .col-xs-12.col-sm-4
+         img(src="/img/vect10.jpg" width="100%")
+
+    .com-xs-12
+       .col-xs-12.col-sm-4
+        h1 7. Using Symmetries
+        .col-xs-12.col-sm
+         info Simple (low-numbered) two input patterns with a positive and negative
+         | &nbsp; input will be a series of symmetrical loops.
+         br
+         br
+         info If you take a divisor of 360, and modify it slightly, a couple degrees in either direction,
+         | &nbsp and add that to the positive-negative pattern, you can achieve a complex symmetrical pattern.
+       .col-xs-12.col-sm-4
+          img(src="/img/vect11.jpg" width="100%")
+       .col-xs-12.col-sm-4
+          img(src="/img/vect12.jpg" width="100%")
